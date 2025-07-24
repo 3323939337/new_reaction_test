@@ -1,0 +1,28 @@
+.flex{
+  display: flex;
+}
+.flex-c{
+  @extend .flex;
+  flex-direction: column;
+}
+.flex-a{
+  @extend .flex;
+  align-items: center;
+}
+.flex-aa{
+  @extend .flex-a;
+  justify-content: center;
+}
+.flex-ca{
+  @extend .flex-c;
+  align-items: center;
+}
+.flex-caa{
+  @extend .flex-ca;
+  justify-content: center;
+}
+.bg-fill{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
