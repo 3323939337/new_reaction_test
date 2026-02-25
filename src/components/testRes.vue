@@ -228,20 +228,19 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped lang="scss">
-/* 你的样式我没动（保持原样） */
 .testRes {
   width: 1920px;
   .title {
-    width: 100%;
+    width: 1920px;
     height: 50px;
     font-size: 35px;
     letter-spacing: 5px;
     margin-bottom: 20hpx;
   }
   .detail {
-    width: 100%;
+    width: 1920px;
     .left {
-      width: 50%;
+      width: 960px;
       .pic {
         width: 300px;
         height: 300hpx;
@@ -260,12 +259,12 @@ onBeforeUnmount(() => {
         align-items: center;
       }
       .chartDom {
-        width: 100%;
+        width: 960px;
         height: 400hpx;
       }
     }
     .right {
-      width: 50%;
+      width: 960px;
       .result {
         .number { font-size: 50px; color: red; }
         .unit { font-size: 30px; margin-top: 22hpx; margin-left: 10px; }

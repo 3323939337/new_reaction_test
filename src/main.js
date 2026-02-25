@@ -18,14 +18,4 @@ app.use(ElementPlus);
 app.use(ElementIcons);
 app.mount('#app');
 
-
-const protWidth = window.innerWidth;
-const protHeight = window.innerHeight;
-
-if (protWidth <= 1000 && protHeight < 1000){
-    adapt2(pkg2, App);
-}else{
-    adapt(pkg, App);
-}
-
-// adapt(pkg, App);
+adapt(pkg, App);
