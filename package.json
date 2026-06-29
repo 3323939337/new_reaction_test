@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve:local": "node server/static-server.js",
+    "start:local": "npm run build && node server/static-server.js",
+    "public": "powershell -ExecutionPolicy Bypass -File server/start-public.ps1",
+    "tunnel:cloudflare": "npm run public",
+    "install:cloudflared": "winget install --id Cloudflare.cloudflared --source winget"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

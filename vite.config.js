@@ -4,6 +4,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
+const START_PORT = Number('0401')
+const PUBLIC_HOSTS = (process.env.PUBLIC_HOSTS || '.trycloudflare.com')
+  .split(',')
+  .map((host) => host.trim())
+  .filter(Boolean)
+
 // https://vite.dev/config/
 export default defineConfig({
   vue: {
@@ -22,7 +28,11 @@ export default defineConfig({
     },
   },
   server: {
+    port: START_PORT,
     host: '0.0.0.0', // 确保 Vite 可从外部访问
-    allowedHosts: ['a3e70792d398.ngrok-free.app']
+    allowedHosts: PUBLIC_HOSTS
+  },
+  preview: {
+    port: START_PORT
   }
 })
